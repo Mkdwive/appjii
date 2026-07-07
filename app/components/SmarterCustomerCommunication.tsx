@@ -78,7 +78,7 @@ const SmarterCustomerCommunication = () => {
                                     </div>
                                     <div className="assistance-sm-img">
                                         <Image
-                                            className="img-fluid" src="/images/ai-assistance-small-img.png"
+                                            className="img-fluid" src="/images/ai-assistance-small-img-v1.png"
                                             alt="AI assistance interface"
                                             loading="eager"
                                             width={196}

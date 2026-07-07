@@ -39,10 +39,10 @@ const HeroSection = () => {
                             <div className="hero-absolute-content ">
                                 <div className="hero-dashboard-preview" data-aos="zoom-in-up" data-aos-duration="1200"
                                     data-aos-delay="450" data-aos-easing="ease-out-cubic">
-                                    <Image className="img-fluid" src="/images/hero-img.png"
+                                    <Image className="img-fluid" src="/images/hero-img-xl.png"
                                         alt="Appjii Application UI showing universal customer conversation inbox workspace"
-                                        width={800}
-                                        height={400}
+                                        width={1160}
+                                        height={630}
                                         style={{ height: 'auto' }}
                                         loading="eager" />
                                     <CommunicationBox />

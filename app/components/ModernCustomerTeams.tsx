@@ -98,8 +98,8 @@ const ModernCustomerTeams = () => {
                     <div className="collab-img-wrapper">
                         <Image
                             className="img-fluid w-full"
-                            src="/images/customer-team.png"
-                            alt="customer-team.png"
+                            src="/images/customer-team-lg.jpg"
+                            alt="customer-team.jpg"
                             width={585}
                             height={546}
                             style={{ height: 'auto' }}
@@ -111,8 +111,8 @@ const ModernCustomerTeams = () => {
                 <div className="col-lg-6 order-3 order-lg-3" data-aos="fade-right" data-aos-delay="300">
                     <div className="collab-img-wrapper">
                         <Image className="img-fluid w-full"
-                            src="/images/connect-with-out-complexity.png"
-                            alt="connect-with-out-complexity.png"
+                            src="/images/connect-with-out-complexity-lg.jpg"
+                            alt="connect-with-out-complexity.jpg"
                             width={585}
                             height={546}
                             style={{ height: 'auto' }}

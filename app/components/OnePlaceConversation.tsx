@@ -38,9 +38,9 @@ const OnePlaceConversation = () => {
                         <div className="appjii-web-img-wrap" data-aos="fade-up" data-aos-delay="200">
                             <Image
                                 className="img-fluid"
-                                src="/images/appjii-web.jpg"
-                                alt="appjii-web.jpg" width={1295}
-                                height={807}
+                                src="/images/appjii-web.png"
+                                alt="appjii-web.jpg" width={1319}
+                                height={833}
                                 style={{ height: 'auto' }} />
 
                         </div>

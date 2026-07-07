@@ -49,7 +49,7 @@ const MultiBusiness = () => {
                         <div className="business-op-card">
                             <div className="position-relative z-5">
                                 <Image
-                                    src="/images/multi-business-mobile.png"
+                                    src="/images/multi-business-mobile-lg.png"
                                     alt="multi-business-mobile.png" width={381}
                                     height={513}
                                               style={{ height: 'auto' }}

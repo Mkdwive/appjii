@@ -3,7 +3,7 @@ import ExpandbleCard from "./ExpandbleCard"
 const HowItWork = () => {
     return (
 
-        <div className="how-it-works-section common-union-fade-both">
+        <div className="how-it-works-section">
             <div className="container-fluid position-relative z-5">
                 <div className="section-header">
                     <h2 className="section-main-title fz-42 common-title" data-aos="fade-up" data-aos-delay="100">How It

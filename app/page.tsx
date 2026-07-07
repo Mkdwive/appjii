@@ -31,7 +31,7 @@ export default function Home() {
       <section className="bottom-cta-section " id="ai-feature-section">
         <AIFeature />
       </section>
-      <section>
+      <section className="pb-134">
         <SmarterCustomerCommunication />
       </section>
       <section id="how-it-work-section">

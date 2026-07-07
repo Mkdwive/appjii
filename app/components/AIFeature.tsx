@@ -8,7 +8,7 @@ const AIFeature = () => {
                     <div className="col-sm-5">
                         <div className="manage-inbox-wrap">
                             <Image className="img-fluid"
-                                src="/images/manage-inbox.png" alt="Manage Inbox"
+                                src="/images/manage-inbox-lg.png" alt="Manage Inbox"
                                 width={511} height={433}
                                 style={{ height: 'auto' }}
                             />

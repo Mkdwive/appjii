@@ -5,7 +5,7 @@ import {
   CustomerSupportIcon,
   WorkflowIcon,
 } from "../components/Icons/ModernBusiness";
-import type{ ChooseDataType } from "../types";
+import type { ChooseDataType } from "../types";
 
 export const chooseData: ChooseDataType[] = [
   {
@@ -15,9 +15,9 @@ export const chooseData: ChooseDataType[] = [
     description: "Manage conversations from every channel in one inbox and respond faster without switching tools.",
     delay: 100,
     Icon: ResponseTimeIcon,
-    image: "/images/better-teeam-collabration.jpg",
+    image: "/images/better-teeam-collabration-lg.jpg",
     imageAlt: "Better team collaboration",
-    infoImage: "/images/team-collabration-msg.jpg",
+    infoImage: "/images/team-collabration-msg-lg.png",
     infoImageAlt: "Team collaboration message",
   },
   {
@@ -27,9 +27,9 @@ export const chooseData: ChooseDataType[] = [
     description: "Keep support, sales, and operations teams aligned with shared communication visibility.",
     delay: 200,
     Icon: TeamCollaborationIcon,
-    image: "/images/better-team-collaboration.jpg",
+    image: "/images/better-team-collaboration-lg.jpg",
     imageAlt: "Better Team Collaboration",
-    infoImage: "/images/team-collabration-msg.jpg",
+    infoImage: "/images/team-collabration-msg-lg.png",
     infoImageAlt: "Team collaboration message",
   },
   {
@@ -39,9 +39,9 @@ export const chooseData: ChooseDataType[] = [
     description: "Manage all customer conversations from one unified platform with complete history tracking.",
     delay: 300,
     Icon: CentralizedCommunicationIcon,
-    image: "/images/centralized-communication.jpg",
+    image: "/images/centralized-communication-lg.jpg",
     imageAlt: "Centralized communication",
-    infoImage: "/images/team-collabration-msg.jpg",
+    infoImage: "/images/team-collabration-msg-lg.png",
     infoImageAlt: "Team collaboration message",
   },
   {
@@ -51,9 +51,9 @@ export const chooseData: ChooseDataType[] = [
     description: "Deliver faster, consistent, and personalized support across every communication channel.",
     delay: 400,
     Icon: CustomerSupportIcon,
-    image: "/images/smarter-workflow-management.jpg",
+    image: "/images/improved-customer-experience-lg.jpg",
     imageAlt: "Customer experience",
-    infoImage: "/images/team-collabration-msg.jpg",
+    infoImage: "/images/team-collabration-msg-lg.png",
     infoImageAlt: "Team collaboration message",
   },
   {
@@ -63,10 +63,10 @@ export const chooseData: ChooseDataType[] = [
     description: "Organize conversations, automate processes, and improve team productivity with centralized workflows.",
     delay: 500,
     Icon: WorkflowIcon,
-    image: "/images/improved-customer-experience.jpg",
+    image: "/images/smarter-workflow-management-lg.jpg",
     imageAlt: "Workflow management",
-    infoImage: "/images/team-collabration-msg.jpg",
+    infoImage: "/images/team-collabration-msg-lg.png",
     infoImageAlt: "Team collaboration message",
   },
- 
+
 ];

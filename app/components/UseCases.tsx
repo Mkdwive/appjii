@@ -24,7 +24,7 @@ const UseCases = () => {
                         <div className="relative">
                             <Image
                                 className="img-fluid"
-                                src="/images/multiple-use-case.jpg"
+                                src="/images/multiple-use-case-lg.jpg"
                                 alt="multiple-use-case.jpg"
                                 width={600}
                                 height={333}

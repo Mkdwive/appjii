@@ -696,7 +696,6 @@ a.btn.btn-primary.bg-white {
 
 .comm-img-wrapper {
     overflow: hidden;
-    border-radius: 40px;
 }
 
 .phone-slides-wrapper {
@@ -720,18 +719,20 @@ a.btn.btn-primary.bg-white {
     width: 100%;
     overflow: hidden;
     height: 100%;
-    background-size: cover;
+    background-size: contain;
     padding: 9px;
+    position: relative;
 }
+
 
 .linear-swiper .swiper-wrapper {
     transition-timing-function: linear !important;
 
 }
 
+
 .comm-img-wrapper {
     overflow: hidden;
-    border-radius: 5%;
 }
 
 .comm-img-wrapper img {
@@ -740,8 +741,19 @@ a.btn.btn-primary.bg-white {
 
 .phone-slider img {
     /* max-width: 90%; */
-    /* border-radius: 5%; */
 
+}
+
+.phone-slider-shadow-wrapper .elliptical-shadow {
+    background: url("/images/elliptical-shadow.png") 0 0 / cover no-repeat;
+    width: 100%;
+    max-width: 420.665px;
+    height: clamp(24px, 3.2vw, 34.5024px);
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
 }
 
 .search-image-box {
@@ -1362,7 +1374,7 @@ a:-webkit-any-link:focus-visible {
     display: flex;
     justify-content: center;
     position: relative;
-    height: 86px;
+    height: 89px;
 }
 
 .branch-svg-wrap img {
@@ -1847,10 +1859,9 @@ a:-webkit-any-link:focus-visible {
     font-weight: var(--fw-500) !important;
     border: 1px solid transparent;
     transition: all 0.3s ease;
-    font-size: 16px;
+    font-size: 16px !important;
     border: 1px solid #E5E5E5;
     color: var(--text-color);
-    font-size: var(--fz-16) !important;
     white-space: nowrap;
 
 }
@@ -1877,8 +1888,8 @@ a:-webkit-any-link:focus-visible {
 
 /* Internal Rows of Feature Items */
 .ai-feature-row-gap {
-    --bs-gutter-x: clamp(24px, 5vw, 65px);
-    --bs-gutter-y: clamp(24px, 4vw, 46px);
+    --bs-gutter-x: clamp(24px, 5vw, 70px);
+    --bs-gutter-y: clamp(24px, 4vw, 52px);
 }
 
 .ai-feature-row {
@@ -1907,7 +1918,7 @@ a:-webkit-any-link:focus-visible {
 
 .ai-feature-text p {
     margin-bottom: 0;
-    font-size: var(--fz-16) !important;
+    font-size: 16px !important;
     color: var(--text-color) !important;
 }
 
@@ -1922,6 +1933,13 @@ a:-webkit-any-link:focus-visible {
     right: 0;
     transform: translate(50%, -50%);
     max-width: 196px;
+    box-shadow: 4px 0px 30px 0px #EDE9FE;
+    border-radius: clamp(10px, 1vw, 14px);
+    padding: 10px;
+    background: white;
+    box-shadow: 4px 0px 30px 0px #EDE9FE;
+
+
 }
 
 .tab-image-frame img {
@@ -1933,7 +1951,7 @@ a:-webkit-any-link:focus-visible {
     border-radius: 14px;
 }
 
-.tab-image-frame:hover img {
+.tab-image-frame:hover>div:first-child>img {
     transform: scale(1.1);
 }
 
@@ -1941,6 +1959,10 @@ a:-webkit-any-link:focus-visible {
 .how-it-works-section {
     padding-block: var(--pad-section) 1rem;
     width: 100%;
+    background: #F6F4FE;
+    padding-top: clamp(60px, 6vw, 87px);
+    padding-bottom: clamp(60px, 10vw, 120px);
+
 }
 
 .section-header {
@@ -1960,7 +1982,7 @@ a:-webkit-any-link:focus-visible {
 /* Process Panel Container Card Frame */
 .process-steps-board {
     background-color: #ffffff;
-    border-radius: 10px !important;
+    border-radius: clamp(10px, 1.5vw, 20px) !important;
     box-shadow: 0px 0px 40px 0px #13054012;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -2103,8 +2125,9 @@ a:-webkit-any-link:focus-visible {
 
 /* Use Case Card Block Structural Setup */
 .use-case-card {
-    background: linear-gradient(270deg, rgba(30, 10, 93, 0.024) 0%, rgba(46, 16, 146, 0.0415385) 51.92%, rgba(62, 22, 195, 0) 100%);
-    border: 1px solid rgba(229, 229, 229, 1);
+    /* background: linear-gradient(270deg, rgba(30, 10, 93, 0.024) 0%, rgba(46, 16, 146, 0.0415385) 51.92%, rgba(62, 22, 195, 0) 100%); */
+    background: var(--white-color);
+    box-shadow: 4px 0px 30px 0px #EDE9FE;
     border-radius: 12px;
     padding: clamp(1.5rem, 2.5vw + 0.5rem, 2rem);
     display: flex;
@@ -2146,7 +2169,6 @@ a:-webkit-any-link:focus-visible {
     border-color: rgba(59, 91, 196, 0.25);
     transform: translateY(-5px);
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-    background: linear-gradient(60deg, rgba(30, 10, 93, 0.024) 0%, rgba(46, 16, 146, 0.0415385) 51.92%, rgba(62, 22, 195, 0) 100%);
 
 }
 
@@ -2329,14 +2351,15 @@ a:-webkit-any-link:focus-visible {
     box-shadow:
         0 12px 24px rgba(0, 0, 0, 0.12),
         0 24px 48px rgba(0, 0, 0, 0.08);
-       
-       
+
+
 
 }
-.ecosystem-card:hover:before{
+
+.ecosystem-card:hover:before {
     inset: -6px;
-  transform: translateY(0px);
-   border-radius: 17px;
+    transform: translateY(0px);
+    border-radius: 17px;
 }
 
 .ecosystem-card[data-aos] {
@@ -2684,11 +2707,12 @@ footer a:hover {
 }
 
 .communication-card {
-    border: 1px solid #E2E2E2;
-    border-radius: 12px;
+    border-radius: 14px;
     padding: clamp(24px, 2vw, 28px);
     transition: .3s;
     max-width: 413px;
+    box-shadow: 4px 0px 25px 0px #EDE9FE;
+
 }
 
 .comm-card-gap {
@@ -3203,11 +3227,50 @@ svg text {
     perspective: 1000px;
 }
 
+.phone-slides-wrapper {
+    max-width: 90%;
+    margin-inline: auto;
+}
+
 /* Stops Swiper from passing global transformation bounds to the viewport wrapper matrix */
 .phone-slider .swiper-wrapper {
     transform-style: flat !important;
 }
 
+.linear-swiper .swiper-pagination {
+    bottom: 0px !important;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.custom-pagination-wrapper {
+    gap: 8px;
+    margin-top: clamp(40px, 4vw, 55px) !important;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Base style for inactive dots */
+.linear-swiper .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background: #E4E4E4;
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+/* Active purple bullet state matching your UI */
+.linear-swiper .swiper-pagination-bullet-active {
+    background: #A797DD !important;
+    width: 10px;
+}
+
+.custom-pagination-wrapper {
+    display: flex;
+    justify-content: center;
+}
 
 /* Responsive Layout System Overrides */
 @media (min-width: 992px) {
@@ -3752,6 +3815,11 @@ body.scrolled .site-navbar {
         padding: clamp(16px, 1vw, 25px) !important;
     }
 
+    .phone-slides-wrapper {
+        max-width: 96%;
+        margin-inline: auto;
+    }
+
 }
 
 @media(min-width:1200px) and (max-width:1399px) {
@@ -4022,6 +4090,27 @@ body.scrolled .site-navbar {
         transform: translateY(0);
     }
 
+    .phone-slides-wrapper {
+        max-width: 100%;
+    }
+
+    .phone-slides-wrapper img {
+        border-radius: 0;
+    }
+
+    .comm-img-wrapper {
+        width: 100%;
+        border-radius: 0 !important;
+        overflow: hidden;
+    }
+
+    .phone-slides-wrapper {
+        border-radius: 38px;
+        margin-inline: auto;
+
+    }
+
+
 }
 
 @media(max-width:991px) {
@@ -4265,8 +4354,15 @@ body.scrolled .site-navbar {
     .step-item-card.is-active .step-card-desc {
         margin-top: 0;
     }
-      .phone-slider{
+
+    .phone-slider {
         background-size: contain;
+    }
+
+    .phone-slides-wrapper {
+        border-radius: 20px;
+        margin-top: -3px;
+        margin-inline: auto;
     }
 }
 
@@ -4792,7 +4888,7 @@ body.scrolled .site-navbar {
     }
 
     .comm-img-wrapper img {
-        width: 70%;
+        /* width: 70%; */
     }
 
     .comm-card-gap {
@@ -4888,11 +4984,51 @@ body.scrolled .site-navbar {
     .communication-box-wrapper {
         display: none;
     }
-    .ai-banner-card{
+
+    .ai-banner-card {
         margin-top: 0;
     }
-    .phone-slider{
+
+    .phone-slider {
         background-size: contain;
+        overflow: hidden !important;
+    }
+
+    .comm-img-wrapper {}
+
+    .phone-slides-wrapper .swiper-slide {
+        overflow: hidden;
+
+    }
+
+    .phone-slides-wrapper img {
+        margin-block: auto !important;
+        display: block;
+        border-radius: 40px;
+        margin-top: auto;
+
+    }
+
+    .comm-img-wrapper {
+        max-width: 100%;
+        margin-inline: auto;
+        overflow: hidden;
+        border-radius: 40px;
+    }
+
+    .phone-slider {
+        background-size: cover;
+        overflow: hidden !important;
+        padding: 13px;
+    }
+
+    .phone-slides-wrapper {
+        margin-top: -3px;
+        border-radius: 40px;
+        margin-inline: auto;
+    }
+    .phone-slider-shadow-wrapper .elliptical-shadow{
+        filter: blur(4px);
     }
 
 }
