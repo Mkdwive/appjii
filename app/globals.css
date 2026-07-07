@@ -731,6 +731,7 @@ a.btn.btn-primary.bg-white {
     z-index: 10;
     background: url("/images/phone-frame.svg") center / contain no-repeat;
     background-size: contain;
+    pointer-events: none;
 }
 
 
