@@ -67,7 +67,7 @@ main {
     --white-color: #fff;
     --light-text: #FFFFFFCC;
     --bg-gradient: radial-gradient(57.85% 57.85% at 50.4% 42.15%, rgba(191, 53, 255, 0.5) 0%, rgba(255, 255, 255, 0.215) 72.63%);
-
+    --angle: 90deg;
     --fz-58: clamp(28px, 4vw, 3.625rem);
     --fz-48: clamp(34px, 3.8vw, 48px);
     --fz-42: clamp(28px, 3vw, 2.625rem);
@@ -722,6 +722,15 @@ a.btn.btn-primary.bg-white {
     background-size: contain;
     padding: 9px;
     position: relative;
+}
+
+.phone-slider::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    background: url("/images/phone-frame.svg") center / contain no-repeat;
+    background-size: contain;
 }
 
 
@@ -2203,8 +2212,7 @@ a:-webkit-any-link:focus-visible {
 /* Ecosystem Individual Feature Card Base */
 .ecosystem-card {
     background-color: #ffffff;
-    border-radius: 10px;
-    border: 1px solid #E5E5E5;
+    border-radius: 14px;
     box-shadow: 4px 0px 30px 0px #EDE9FE;
     display: flex;
     flex-direction: column;
@@ -2229,18 +2237,54 @@ a:-webkit-any-link:focus-visible {
     height: 100%;
 }
 
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
 .ecosystem-card:before {
     content: "";
-    background: linear-gradient(90deg, #F97316 0%, rgba(249, 115, 22, 0.2) 100%);
+    background: linear-gradient(var(--angle), #F97316 0%, rgba(249, 115, 22, 0.2) 100%);
     position: absolute;
     top: 0;
     left: 0;
+    border-radius: 14px;
     border-top-left-radius: 17px;
     border-top-right-radius: 17px;
     inset: 0;
     transform: translateY(-6px);
-    animation: moveCcard 3s linear infinite;
+}
+.ecosystem-card:after {
+    content: "";
+    filter: blur(0px);
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    border-radius: 17px;
+
+}
+
+.ecosystem-card:hover:before {
+    animation: rotateGradient 4s linear infinite;
     transition: .3s;
+}
+.ecosystem-card:hover:after {
+    animation: rotateGradient 4s linear infinite;
+    transition: .3s;
+    filter: blur(8px);
+    inset: -6px;
+}
+
+
+@keyframes rotateGradient {
+    from {
+        --angle: 0deg;
+    }
+
+    to {
+        --angle: 360deg;
+    }
 }
 
 .powerful-card-content {
@@ -2250,32 +2294,55 @@ a:-webkit-any-link:focus-visible {
 }
 
 .crm-card:before {
-    background: linear-gradient(90deg, #F97316 0%, rgba(249, 115, 22, 0.2) 100%);
+    background: linear-gradient(var(--angle), #F97316 0%, rgba(249, 115, 22, 0.2) 100%);
+
+}
+.crm-card::after {
+    background: linear-gradient(var(--angle), #F97316 0%, rgba(249, 115, 22, 0.2) 100%);
 
 }
 
 .invoice-card:before {
-    background: linear-gradient(90deg, #03B8BB 0%, rgba(13, 148, 136, 0.2) 100%);
+    background: linear-gradient(var(--angle), #03B8BB 0%, rgba(13, 148, 136, 0.2) 100%);
+
+}
+.invoice-card:after {
+    background: linear-gradient(var(--angle), #03B8BB 0%, rgba(13, 148, 136, 0.2) 100%);
 
 }
 
 .ast-card:before {
-    background: linear-gradient(90deg, #6C83FF 0%, rgba(124, 58, 237, 0.2) 100%);
+    background: linear-gradient(var(--angle), #6C83FF 0%, rgba(124, 58, 237, 0.2) 100%);
+
+}
+.ast-card:after {
+    background: linear-gradient(var(--angle), #6C83FF 0%, rgba(124, 58, 237, 0.2) 100%);
 
 }
 
 .stock-card:before {
-    background: linear-gradient(90deg, #095FFD 0%, rgba(2, 132, 199, 0.2) 100%);
+    background: linear-gradient(var(--angle), #095FFD 0%, rgba(2, 132, 199, 0.2) 100%);
+
+}
+.stock-card:after {
+    background: linear-gradient(var(--angle), #095FFD 0%, rgba(2, 132, 199, 0.2) 100%);
 
 }
 
 .ord-card:before {
-    background: linear-gradient(90deg, #E40012 0%, rgba(225, 29, 72, 0.2) 100%);
+    background: linear-gradient(var(--angle), #E40012 0%, rgba(225, 29, 72, 0.2) 100%);
+
+}
+.ord-card:after {
+    background: linear-gradient(var(--angle), #E40012 0%, rgba(225, 29, 72, 0.2) 100%);
 
 }
 
 .analyt-card:before {
-    background: linear-gradient(90deg, #4C7AFF 0%, rgba(37, 99, 235, 0.2) 100%);
+    background: linear-gradient(var(--angle), #4C7AFF 0%, rgba(37, 99, 235, 0.2) 100%);
+}
+.analyt-card:after {
+    background: linear-gradient(var(--angle), #4C7AFF 0%, rgba(37, 99, 235, 0.2) 100%);
 }
 
 .text-primary-color {
@@ -3270,6 +3337,10 @@ svg text {
 .custom-pagination-wrapper {
     display: flex;
     justify-content: center;
+}
+
+.phone-slider {
+    position: relative;
 }
 
 /* Responsive Layout System Overrides */
@@ -4994,8 +5065,6 @@ body.scrolled .site-navbar {
         overflow: hidden !important;
     }
 
-    .comm-img-wrapper {}
-
     .phone-slides-wrapper .swiper-slide {
         overflow: hidden;
 
@@ -5004,7 +5073,6 @@ body.scrolled .site-navbar {
     .phone-slides-wrapper img {
         margin-block: auto !important;
         display: block;
-        border-radius: 40px;
         margin-top: auto;
 
     }
@@ -5013,7 +5081,6 @@ body.scrolled .site-navbar {
         max-width: 100%;
         margin-inline: auto;
         overflow: hidden;
-        border-radius: 40px;
     }
 
     .phone-slider {
@@ -5024,10 +5091,11 @@ body.scrolled .site-navbar {
 
     .phone-slides-wrapper {
         margin-top: -3px;
-        border-radius: 40px;
+        /* border-radius: 40px; */
         margin-inline: auto;
     }
-    .phone-slider-shadow-wrapper .elliptical-shadow{
+
+    .phone-slider-shadow-wrapper .elliptical-shadow {
         filter: blur(4px);
     }
 
