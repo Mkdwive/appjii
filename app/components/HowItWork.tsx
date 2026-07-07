@@ -1,0 +1,128 @@
+import ExpandbleCard from "./ExpandbleCard"
+
+const HowItWork = () => {
+    return (
+
+        <div className="how-it-works-section common-union-fade-both">
+            <div className="container-fluid position-relative z-5">
+                <div className="section-header">
+                    <h2 className="section-main-title fz-42 common-title" data-aos="fade-up" data-aos-delay="100">How It
+                        Works</h2>
+                    <p className="section-sub-desc fz-16" data-aos="fade-up" data-aos-delay="200">
+                        From signup to your first customer conversation, appjii gets you set up fast.
+                    </p>
+                </div>
+                {/* 
+                    <div className="process-steps-board d-flex flex-column flex-lg-row border rounded 
+                    shadow-sm overflow-hidden bg-white"
+                        data-aos="zoom-in" data-aos-delay="100">
+
+                        <div className="step-item-card is-active" data-step="1">
+                            <div className="step-number-badge mb-4">01</div>
+                            <div className="step-text-wrapper">
+                                <div className="step-icon">
+                                    <svg width="54" height="38" viewBox="0 0 54 38" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M31.9688 3.46875C34.4062 1.21875 37.5 0 40.7812 0C48.0938 0 54 5.90625 54 13.2188C54 16.6875 52.5938 20.0625 50.1562 22.5L42.75 29.9062C40.2188 32.3438 36.9375 33.75 33.375 33.75C26.1562 33.75 20.25 27.8438 20.25 20.625C20.25 18.6562 20.625 16.875 21.4688 15.1875C21.75 14.4375 22.6875 14.0625 23.4375 14.4375C24.1875 14.7188 24.4688 15.6562 24.1875 16.4062C23.5312 17.7188 23.25 19.125 23.25 20.625C23.25 26.25 27.8438 30.75 33.375 30.75C36.0938 30.75 38.7188 29.7188 40.5938 27.75L48 20.3438C49.9688 18.4688 51 15.8438 51 13.2188C51 7.59375 46.4062 3 40.875 3C38.3438 3 36 3.9375 34.125 5.53125C33.4688 4.78125 32.7188 4.03125 31.9688 3.46875ZM20.625 6.75C17.9062 6.75 15.2812 7.78125 13.4062 9.75L6 17.1562C4.03125 19.0312 3 21.6562 3 24.2812C3 29.9062 7.59375 34.5 13.2188 34.5C15.6562 34.5 18.0938 33.5625 19.875 31.9688C20.5312 32.7188 21.2812 33.4688 22.0312 34.125C19.5938 36.2812 16.5 37.5 13.2188 37.5C5.90625 37.5 0 31.5938 0 24.375C0 20.8125 1.40625 17.5312 3.84375 15L11.25 7.59375C13.7812 5.15625 17.0625 3.75 20.625 3.75C27.8438 3.75 33.75 9.65625 33.75 16.9688C33.75 18.8438 33.375 20.7188 32.5312 22.4062C32.25 23.1562 31.3125 23.4375 30.5625 23.1562C29.8125 22.7812 29.5312 21.8438 29.8125 21.0938C30.4688 19.7812 30.75 18.375 30.75 16.9688C30.75 11.3438 26.1562 6.75 20.625 6.75Z"
+                                            fill="#3E16C3" />
+                                    </svg>
+
+                                </div>
+                                <h3 className="step-card-title fz-24 mb-3">Connect Your Communication Channels</h3>
+                                <div className="step-card-desc fz-16">
+                                    <p className="mb-0">
+                                        Integrate your preferred communication channels
+                                        <span className="text-hidden">
+                                            into your workspace. Setup is
+                                            simple and designed for quick onboarding.
+                                        </span>
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="step-item-card" data-step="2">
+                            <div className="step-number-badge mb-4">02</div>
+                            <div className="step-text-wrapper">
+                                <div className="step-icon">
+                                    <svg width="57" height="48" viewBox="0 0 57 48" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M21 21C25.9688 21 30 16.9688 30 12C30 7.03125 25.9688 3 21 3C16.0312 3 12 7.03125 12 12C12 16.9688 16.0312 21 21 21ZM21 0C27.6562 0 33 5.34375 33 12C33 18.6562 27.6562 24 21 24C14.3438 24 9 18.6562 9 12C9 5.34375 14.3438 0 21 0ZM16.5 31.5C9.09375 31.5 3 37.5938 3 45V46.5C3 47.3438 2.34375 48 1.5 48C0.65625 48 0 47.3438 0 46.5V45C0 35.9062 7.40625 28.5 16.5 28.5H25.5C34.5938 28.5 42 35.9062 42 45V46.5C42 47.3438 41.3438 48 40.5 48C39.6562 48 39 47.3438 39 46.5V45C39 37.5938 33 31.5 25.5 31.5H16.5ZM46.5 24.75V19.5H41.25C40.4062 19.5 39.75 18.8438 39.75 18C39.75 17.1562 40.4062 16.5 41.25 16.5H46.5V11.25C46.5 10.4062 47.1562 9.75 48 9.75C48.8438 9.75 49.5 10.4062 49.5 11.25V16.5H54.75C55.5938 16.5 56.25 17.1562 56.25 18C56.25 18.8438 55.5938 19.5 54.75 19.5H49.5V24.75C49.5 25.5938 48.8438 26.25 48 26.25C47.1562 26.25 46.5 25.5938 46.5 24.75Z"
+                                            fill="#3E16C3" />
+                                    </svg>
+
+                                </div>
+                                <h3 className="step-card-title fz-24 mb-3">Invite Your <br />Team</h3>
+                                <div className="step-card-desc fz-16">
+                                    <p className="mb-0">
+                                        Add your team and collaborate instantly.
+                                        <span className="text-hidden">Invite members, manage projects, and stay connected
+                                            effortlessly.</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="step-item-card p-4 p-xl-5" data-step="3">
+                            <div className="step-number-badge mb-4">03</div>
+                            <div className="step-text-wrapper">
+                                <div className="step-icon">
+                                    <svg width="48" height="42" viewBox="0 0 48 42" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M9.1875 3C7.6875 3 6.375 4.125 6.1875 5.53125L3.28125 25.5H12.6562C13.6875 25.5 14.625 25.9688 15.1875 26.8125L17.3438 30H30.6562L32.8125 26.8125C33.375 25.9688 34.3125 25.5 35.3438 25.5H44.7188L41.8125 5.53125C41.625 4.125 40.3125 3 38.9062 3H9.1875ZM3 36C3 37.6875 4.3125 39 6 39H42C43.6875 39 45 37.6875 45 36V28.5H35.3438L33.1875 31.6875C32.625 32.5312 31.6875 33 30.75 33H17.3438C16.3125 33 15.375 32.5312 14.8125 31.6875L12.6562 28.5H3V36ZM3.1875 5.15625C3.65625 2.15625 6.1875 0 9.1875 0H38.9062C41.8125 0 44.3438 2.15625 44.8125 5.15625L47.9062 26.4375C48 26.7188 48 27 48 27.375V36C48 39.2812 45.2812 42 42 42H6C2.71875 42 0 39.2812 0 36V27.375C0 27 0 26.7188 0.09375 26.4375L3.1875 5.15625ZM31.7812 18.2812L25.0312 25.0312C24.4688 25.6875 23.5312 25.6875 22.9688 25.0312L16.2188 18.2812C15.6562 17.7188 15.6562 16.7812 16.2188 16.2188C16.7812 15.6562 17.7188 15.6562 18.2812 16.2188L22.5 20.3438V9C22.5 8.15625 23.1562 7.5 24 7.5C24.8438 7.5 25.5 8.15625 25.5 9V20.3438L29.7188 16.2188C30.2812 15.6562 31.2188 15.6562 31.7812 16.2188C32.4375 16.7812 32.4375 17.7188 31.7812 18.2812Z"
+                                            fill="#3E16C3" />
+                                    </svg>
+
+                                </div>
+                                <h3 className="step-card-title fz-24 mb-3">
+                                    Unified Inbox Management
+                                </h3>
+                                <div className="step-card-desc fz-16">
+                                    <p className="mb-0">
+
+                                        Manage conversations from one inbox.
+                                        <span className="text-hidden">
+                                            Centralize customer interactions to improve team efficiency and
+                                            collaboration.
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="step-item-card" data-step="4">
+                            <div className="step-number-badge mb-4">04</div>
+                            <div className="step-text-wrapper">
+                                <div className="step-icon">
+                                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M44.5312 1.3125C45.1875 1.5 45.6562 1.96875 45.75 2.53125C46.5938 6.65625 47.0625 12.9375 43.9688 18.9375C42.1875 22.5 39.1875 25.7812 34.5 28.5938V37.0312C34.5 38.625 33.6562 40.0312 32.3438 40.875L24.0938 45.8438C22.0312 47.0625 19.5 45.5625 19.5 43.3125V33.5625C19.5 30.2812 16.7812 27.5625 13.5 27.5625H3.84375C1.5 27.5625 0 25.0312 1.21875 23.0625L6.1875 14.7188C7.03125 13.4062 8.4375 12.5625 10.0312 12.5625H18.5625C21.2812 7.875 24.5625 4.96875 28.125 3.09375C34.125 0 40.4062 0.5625 44.5312 1.3125ZM22.5 33.2812C22.5 33.375 22.5 33.4688 22.5 33.5625V43.3125L30.75 38.3438C31.2188 38.0625 31.5 37.5938 31.5 37.0312V30.0938C28.9688 31.3125 25.9688 32.4375 22.5 33.2812ZM41.25 17.625C43.6875 12.8438 43.5938 7.875 42.9375 4.125C39.1875 3.46875 34.2188 3.375 29.5312 5.8125C24.5625 8.34375 19.6875 13.7812 16.7812 25.2188C19.125 26.0625 21 27.9375 21.9375 30.2812C33.2812 27.4688 38.7188 22.5 41.3438 17.625H41.25ZM16.9688 15.5625H10.0312C9.5625 15.5625 9 15.8438 8.8125 16.3125L3.84375 24.5625H13.5C13.5938 24.5625 13.6875 24.5625 13.7812 24.5625C14.7188 21.0938 15.75 18.1875 16.9688 15.5625ZM30.75 14.0625C30.75 15.2812 31.7812 16.3125 33 16.3125C34.2188 16.3125 35.25 15.2812 35.25 14.0625C35.25 12.8438 34.2188 11.8125 33 11.8125C31.7812 11.8125 30.75 12.8438 30.75 14.0625ZM33 19.3125C30.0938 19.3125 27.75 16.9688 27.75 14.0625C27.75 11.1562 30.0938 8.8125 33 8.8125C35.9062 8.8125 38.25 11.1562 38.25 14.0625C38.25 16.9688 35.9062 19.3125 33 19.3125Z"
+                                            fill="#3E16C3" />
+                                    </svg>
+
+                                </div>
+                                <h3 className="step-card-title fz-24 mb-3">Scalable Customer Operations</h3>
+                                <div className="step-card-desc fz-16">
+                                    <p className="mb-0">
+                                        Scale support as your business grows.
+                                        <span className="text-hidden">
+                                            Adapt your workflows and resources to meet evolving customer needs.
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div> */}
+                <ExpandbleCard />
+            </div>
+        </div>
+    )
+}
+
+export default HowItWork
